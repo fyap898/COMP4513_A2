@@ -8,6 +8,8 @@ import Gallery from './Components/Gallery/Gallery'
 import Genre from './Components/Genre/Genre'
 import Painting from './Components/Painting/Painting'
 import Favourite from './Components/Favourite/Favourite'
+import Login from './Components/Login'
+import PaintingInfo from './Components/Painting/PaintingInfo'
 
 // depend which button is selected, display which page
 function App() {
@@ -16,8 +18,10 @@ function App() {
     
     <article>
         <Header/>
+        <Artist/>
+        <Genre/>
+        <Gallery/>
         <Painting/>
-        <Favourite/>
     </article>
   );
 }

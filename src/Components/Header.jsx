@@ -17,5 +17,5 @@ const Header = (props) => {
 
 export default Header;
 
-// "px-6 py-3 bg-gray-400 rounded-md" chosen
-// "px-6 py-3 bg-gray-200 rounded-md" rest
+// "px-6 py-3 rounded-md bg-[#3D5C64] text-[#DAE2DF]" chosen
+// "px-6 py-3 rounded-md bg-[#A0BBBF] text-black hover:bg-[#0A171A] hover:text-white" rest

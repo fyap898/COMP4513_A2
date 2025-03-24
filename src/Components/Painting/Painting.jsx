@@ -4,7 +4,6 @@ import PaintingList from "./PaintingList";
 const Painting = () => {
     return(
         <main class="grid grid-cols-[3fr_7fr] gap-4 mt-24 p-8 bg-[#6B8B93]">
-
           <section class="bg-[#A0BBBF] shadow-md p-4 rounded-lg self-start">
               <h3 class="text-lg font-semibold text-[#0A171A]">Painting Filters</h3>
               <PaintingFilter/>
@@ -21,3 +20,7 @@ const Painting = () => {
 }
 
 export default Painting;
+
+// main bg-[#6B8B93]
+// section bg-[#A0BBBF]
+// h in section text-[#0A171A]
