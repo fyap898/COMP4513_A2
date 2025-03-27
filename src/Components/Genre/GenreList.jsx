@@ -2,7 +2,7 @@ import GenreListItem from "./GenreListItem";
 
 const GenreList = () => {
     return(
-        <ul class="mt-4 space-y-2">
+        <ul className="mt-4 space-y-2">
             <GenreListItem/>
         </ul>
     );

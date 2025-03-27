@@ -6,16 +6,16 @@ import FavouritePainting from "./FavouritePainting";
 
 const Favourite = () => {
     return(
-        <div id="favorites-modal" class="fixed inset-0 backdrop-blur-md flex items-center justify-center pointer-events-none hidden">
-            <main class="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-4xl h-auto max-h-[80vh] pointer-events-auto relative top-12">
-                <div class="flex justify-between items-center pb-4">
-                    <h2 class="text-xl font-semibold">Favourites</h2>
+        <div id="favorites-modal" className="fixed inset-0 backdrop-blur-md flex items-center justify-center pointer-events-none hidden">
+            <main className="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-4xl h-auto max-h-[80vh] pointer-events-auto relative top-12">
+                <div className="flex justify-between items-center pb-4">
+                    <h2 className="text-xl font-semibold">Favourites</h2>
                     <FavouriteManip/>
                 </div>
 
                 <FavouriteNav/>
 
-                <section class="p-6 bg-white rounded-b-lg shadow-md">
+                <section className="p-6 bg-white rounded-b-lg shadow-md">
                     
                         <FavouriteGallery/>
                     

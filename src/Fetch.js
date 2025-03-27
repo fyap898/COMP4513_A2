@@ -1,7 +1,46 @@
-useEffect( () => {
-    url = "https://grave-talented-floss.glitch.me/api/artists";
-    console.log('fetching … here to check if I’ve gone infinite');
-    fetch (url)
-    .then( resp => resp.json() )
-    .then( data => { setSeasons(data); })
-    }, [] );
+import supabase from './supabase.js'; // adjust path to your supabase.js
+
+async function fetchAllData() {
+    console.log('getting from supabase…');
+
+    const { data: artistsData, error: artistsError } = await supabase
+      .from('artists')
+      .select('*');
+    if (artistsError) {
+      console.error('Error fetching artists:', artistsError);
+      return;
+    }
+
+    const { data: galleriesData, error: galleriesError } = await supabase
+      .from('galleries')
+      .select('*');
+    if (galleriesError) {
+      console.error('Error fetching galleries:', galleriesError);
+      return;
+    }
+
+    const { data: paintingsData, error: paintingsError } = await supabase
+      .from('paintings')
+      .select('*');
+    if (paintingsError) {
+      console.error('Error fetching paintings:', paintingsError);
+      return;
+    }
+
+    const { data: genresData, error: genresError } = await supabase
+      .from('genres')
+      .select('*');
+    if (genresError) {
+      console.error('Error fetching genres:', genresError);
+      return;
+    }
+
+    return {
+        artistsData,
+        galleriesData,
+        paintingsData,
+        genresData
+      };
+}
+
+export default fetchAllData;

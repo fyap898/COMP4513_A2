@@ -1,6 +1,8 @@
-const ArtistListItem = () => {
+const ArtistListItem = (props) => {
+
+    const name = props.firstName ? `${props.firstName} ${props.lastName}` : props.lastName;
     return (
-        <li class="cursor-pointer p-2 hover:bg-gray-100 rounded">Doe, John</li>
+        <li className="cursor-pointer p-2 hover:bg-[#DAE2DF] rounded">{name}</li>
     );
 }
 

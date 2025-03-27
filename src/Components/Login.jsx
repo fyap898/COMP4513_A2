@@ -1,4 +1,8 @@
-const Login = () => {
+const Login = (props) => {
+
+    // console.log(props.email);
+    // console.log(props.password);
+
     return(
         <div className="min-h-screen flex flex-col items-center justify-center px-4">
             <h1 className="text-8xl font-bold text-[#0A171A] mb-10 tracking-widest">
@@ -10,13 +14,15 @@ const Login = () => {
                     Login
                 </h2>
 
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={props.handleLogin}>
                     <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-[#DAE2DF] mb-1 text-left">
                             Email
                         </label>
                         <input type="email" 
                             id="email" 
+                            value={props.email}
+                            onChange={(e) => props.setEmail(e.target.value)}
                             className="w-full px-4 py-2 border border-[#6B8B93] rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D5C64] bg-[#A0BBBF] text-[#0A171A]" 
                             placeholder="Enter your email"/>
                     </div>
@@ -28,6 +34,8 @@ const Login = () => {
                         </label>
                         <input type="password"
                                 id="password"
+                                value={props.password}
+                                onChange={(e) => props.setPassword(e.target.value)}
                                 className="w-full px-4 py-2 border border-[#6B8B93] rounded-md focus:outline-none focus:ring-2 focus:ring-[#3D5C64] bg-[#A0BBBF] text-[#0A171A]"
                                 placeholder="Enter your password"/>
                     </div>
