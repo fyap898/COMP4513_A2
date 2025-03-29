@@ -6,7 +6,7 @@ const ArtistList = (props) => {
     );
     return (
               <ul className="mt-4 space-y-2">
-                  {sortedArtists.map(a => <ArtistListItem key={a.artistId} lastName={a.lastName} firstName={a.firstName}/>)}
+                  {sortedArtists.map(a => <ArtistListItem key={a.artistId} artist={a} populateInfo={props.populateInfo}/>)}
               </ul>
     );
 }

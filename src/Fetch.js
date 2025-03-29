@@ -35,11 +35,20 @@ async function fetchAllData() {
       return;
     }
 
+    const { data: paintingGenresData, error: paintingGenresError } = await supabase
+      .from('paintinggenres')
+      .select('*');
+    if (paintingGenresError) {
+      console.error('Error fetching genres:', paintingGenresError);
+      return;
+    }
+
     return {
         artistsData,
         galleriesData,
         paintingsData,
-        genresData
+        genresData,
+        paintingGenresData
       };
 }
 

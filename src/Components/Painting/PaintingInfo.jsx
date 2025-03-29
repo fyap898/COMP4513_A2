@@ -1,5 +1,6 @@
 import PaintingDomColItem from "./PaintingDomColItem";
 
+// Input: painting, key,  
 const PaintingInfo = (props) => {
 
     const imageFileName = String(props.painting.imageFileName);
@@ -46,7 +47,7 @@ const PaintingInfo = (props) => {
                         <div className="mt-4">
                             <p className="text-xl text-left font-bold mb-2">Dominant Colors</p>
                             <div className="flex gap-2">
-                                {props.domColour.map(c => <PaintingDomColItem key={`${c.web}-${c.name}`} colourCode={c.web} colourName={c.name}/>)}
+                                {props.painting.domColors.map(c => <PaintingDomColItem key={`${c.web}-${c.name}`} colourCode={c.web} colourName={c.name}/>)}
                             </div>
                         </div>
                     </div>

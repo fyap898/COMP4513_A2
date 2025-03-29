@@ -11,6 +11,7 @@ import Favourite from './Components/Favourite/Favourite'
 import Login from './Components/Login'
 import PaintingInfo from './Components/Painting/PaintingInfo'
 import fetchAllData from './Fetch'
+import EnrichPaintings from './EnrichPaintings'
 
 // depend which button is selected, display which page
 function App() {
@@ -20,7 +21,8 @@ function App() {
   const [galleries, setGalleries] = useState([]);
   const [paintings, setPaintings] = useState([]);
   const [genres, setGenres] = useState([]);
-  const [domColours, setDomColours] = useState({});
+  const [paintingGenres, setPaintingGenres] = useState([]);
+  const [enrichedPaintings, setEnrichedPaintings] = useState([]);
 
   //Login credential
   const [email, setEmail] = useState('');
@@ -31,7 +33,7 @@ function App() {
 
   // Page State
   // available page: 'login', 'artist', 'gallery', 'painting', 'genre', 'favourite', 'about'
-  const [currentPage, setCurrentPage] = useState('artist');
+  const [currentPage, setCurrentPage] = useState('painting');
 
 
   const handleLogin = (e) => {
@@ -69,6 +71,7 @@ function App() {
       body.style.backgroundImage = "";
     };
   }
+
   
 
   useEffect(() => {
@@ -80,21 +83,17 @@ function App() {
         setGalleries(data.galleriesData);
         setPaintings(data.paintingsData);
         setGenres(data.genresData);
+        setPaintingGenres(data.paintingGenresData);
       }
     }
 
     loadData();
   }, []);
-
-  // Use Effect for loading dominant color for each painting, query using paintingId
+ 
   useEffect(() => {
-    console.log("loadColour");
-    const parsed = {};
-    paintings.forEach(p => {
-      parsed[p.paintingId] = p.jsonAnnotations ? JSON.parse(p.jsonAnnotations).dominantColors : [];
-    });
-    setDomColours(parsed);
-  }, [paintings])
+    const enriched = EnrichPaintings(paintings, artists, galleries, genres, paintingGenres);
+    setEnrichedPaintings(enriched);
+  }, [artists, galleries, paintings, genres, paintingGenres]);
 
   // Use Effect for switching page depend on the current page state
   useEffect(() => {
@@ -104,10 +103,10 @@ function App() {
   // debug console
   // console.log(artists);
   // console.log(galleries);
-  // console.log(paintings);
   // console.log(genres);
   // console.log(currentPage);
-  // console.log(domColours);
+  // console.log(domColors);
+  console.log(enrichedPaintings);
 
 
 
@@ -117,9 +116,9 @@ function App() {
       {currentPage !== 'login' &&
       <article >
           <Header page={currentPage} setPage={setCurrentPage}/>
-          {currentPage === 'artist' && <Artist artists={artists} paintings={paintings}/>}
+          {currentPage === 'artist' && <Artist artists={artists} paintings={enrichedPaintings} galleries={galleries} genres={genres}/>}
           {currentPage === 'gallery' && <Gallery data={galleries}/>}
-          {currentPage === 'painting' && <Painting paintings={paintings} artists={artists} galleries={galleries} genres={genres} domColours={domColours}/>}
+          {currentPage === 'painting' && <Painting paintings={enrichedPaintings} artists={artists} galleries={galleries} genres={genres}/>}
           {currentPage === 'genre' && <Genre data={genres}/>}
 
       </article>}

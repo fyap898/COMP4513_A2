@@ -29,10 +29,10 @@ const Painting = (props) => {
 
           <section className="bg-[#A0BBBF] shadow-md p-4 rounded-lg">
               <h3 className="text-lg font-semibold text-left text-[#0A171A]">Paintings that match the filter</h3>
-              <PaintingList paintings={props.paintings} artists={props.artists} galleries={props.galleries} genres={props.genres} learnMore={setSelectedPainting}/>
+              <PaintingList paintings={props.paintings} learnMore={setSelectedPainting}/>
           </section>
 
-          {selectedPainting && <PaintingInfo painting={selectedPainting} key={selectedPainting.paintingId} onClose={() => setSelectedPainting(null)} domColour={props.domColours[selectedPainting.paintingId]}/>}
+          {selectedPainting && <PaintingInfo painting={selectedPainting} key={selectedPainting.paintingId} onClose={() => setSelectedPainting(null)}/>}
 
       </main>
     );

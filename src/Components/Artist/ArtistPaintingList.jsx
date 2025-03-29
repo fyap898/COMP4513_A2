@@ -1,12 +1,13 @@
 import ArtistPaintingListItem from "./ArtistPaintingListItem";
 import {useState} from 'react';
 
-const ArtistPaintingList = () => {
+const ArtistPaintingList = (props) => {
 
     const [sortBy, setSortBy] = useState("title");
     const [ascending, setAscending] = useState(true);
 
-    const sortedPaintings = [...mockPaintings].sort((a, b) => {
+    const artistPaintings = props.paintings.filter(p => p.artistId === props.artist.artistId)
+    const sortedPaintings = [...artistPaintings].sort((a, b) => {
         const valA = a[sortBy];
         const valB = b[sortBy];
 
@@ -23,6 +24,7 @@ const ArtistPaintingList = () => {
         setAscending(true);
         }
     };
+
     return(
         <div className="mt-4">
             <div className="flex justify-between font-semibold text-[#0A171A] mb-2">
@@ -36,7 +38,7 @@ const ArtistPaintingList = () => {
 
             <ul className="space-y-2">
                 {sortedPaintings.map((p, index) => (
-                    <ArtistPaintingListItem key={index} painting={p} />
+                    <ArtistPaintingListItem key={index} painting={p} learnMore={props.learnMore}/>
                 ))}
             </ul>
         </div>
