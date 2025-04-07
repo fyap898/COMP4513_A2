@@ -80,6 +80,7 @@ const Favourite = (props) => {
     }, [selectedRemovePainting]);
 
     return(
+        <>
         <main className="fixed inset-0 bg-[#A0BBBF] flex items-center justify-center z-40">
             <section className="bg-gray-200 p-6 rounded-lg shadow-md w-full max-w-4xl h-[80vh] relative top-12 flex flex-col justify-start pointer-events-auto">
                 <div className="flex justify-between items-center pb-4">
@@ -106,6 +107,7 @@ const Favourite = (props) => {
                 </div>
             </section>
 
+        </main>
             {selectedPainting && (
                 <PaintingInfo painting={selectedPainting} key={selectedPainting.paintingId} favPainting={props.favPainting} onClose={() => setSelectedPainting(null)} onFav={() => props.addPainting((prev) => [...prev, selectedPainting])}/>
             )}
@@ -117,7 +119,7 @@ const Favourite = (props) => {
             {selectedArtist && (
                 <ArtistModal artist={selectedArtist} key={selectedArtist.artistId} onClose={() => setSelectedArtist(null)}/>
             )}
-        </main>
+        </>
     );
 }
 

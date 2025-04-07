@@ -35,28 +35,39 @@ function App() {
   }
 
   //Login credential
+  const [users, setUsers] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const registerUser = (newEmail, newPassword) => {
+    // Check if user already exists
+    const existingUser = users.find(user => user.email === newEmail);
+    if (existingUser) {
+      alert('User already exists');
+      return;
+    }
+  
+    // Add new user
+    setUsers(prev => [...prev, { email: newEmail, password: newPassword }]);
+    alert('Registration successful!');
+  };
 
   // Login state
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Page State
   // available page: 'login', 'artist', 'gallery', 'painting', 'genre', 'favourite', 'about'
-  const [currentPage, setCurrentPage] = useState('favourite');
+  const [currentPage, setCurrentPage] = useState('login');
 
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (inputEmail, inputPassword) => {
   
-    const validEmail = "felix@mtroyal.ca";
-    const validPassword = "comp4513";
-  
-    if (email === validEmail && password === validPassword) {
+    const user = users.find(u => u.email === inputEmail && u.password === inputPassword);
+
+    if (user) {
       alert("Login successful!");
       setIsLoggedIn(true);
-      setCurrentPage('artist'); // can be any page
-
+      setCurrentPage('artist'); // or wherever you want
     } else {
       alert("Invalid credentials. Please try again.");
     }
@@ -115,16 +126,16 @@ function App() {
 
   return (
     <>
-      {currentPage === 'login' && <Login handleLogin={handleLogin} email={email} password={password} setEmail={setEmail} setPassword={setPassword}/>}
+      {currentPage === 'login' && <Login handleLogin={handleLogin} email={email} password={password} setEmail={setEmail} setPassword={setPassword} registerUser={registerUser}/>}
       {currentPage !== 'login' &&
       <article >
           <Header page={currentPage} setPage={setCurrentPage}/>
-          {currentPage === 'artist' && <Artist setCurrentPage={setCurrentPage} artists={artists} paintings={enrichedPaintings} galleries={galleries} genres={genres} favArt={favArt} favPainting={favPainting} addArt={setFavArt} addPainting={setFavPainting}/>}
-          {currentPage === 'gallery' && <Gallery setCurrentPage={setCurrentPage} galleries={galleries} paintings={enrichedPaintings} favGal={favGal} favPainting={favPainting} addGal={setFavGal} addPainting={setFavPainting}/>}
-          {currentPage === 'painting' && <Painting setCurrentPage={setCurrentPage} paintings={enrichedPaintings} artists={artists} galleries={galleries} genres={genres} favPainting={favPainting} addPainting={setFavPainting}/>}
-          {currentPage === 'genre' && <Genre setCurrentPage={setCurrentPage} genres={genres} paintings={enrichedPaintings} favPainting={favPainting} addPainting={setFavPainting}/>}
-          {currentPage === 'favourite' && <Favourite setCurrentPage={setCurrentPage} emptyFav={emptyFav} favGal={favGal} favArt={favArt} favPainting={favPainting} setFavGal={setFavGal} setFavArt={setFavArt} setFavPainting={setFavPainting}/>}
-          {currentPage === 'about' && <About/>}
+          {currentPage === 'artist' && <Artist artists={artists} paintings={enrichedPaintings} galleries={galleries} genres={genres} favArt={favArt} favPainting={favPainting} addArt={setFavArt} addPainting={setFavPainting}/>}
+          {currentPage === 'gallery' && <Gallery galleries={galleries} paintings={enrichedPaintings} favGal={favGal} favPainting={favPainting} addGal={setFavGal} addPainting={setFavPainting}/>}
+          {currentPage === 'painting' && <Painting paintings={enrichedPaintings} artists={artists} galleries={galleries} genres={genres} favPainting={favPainting} addPainting={setFavPainting}/>}
+          {currentPage === 'genre' && <Genre genres={genres} paintings={enrichedPaintings} favPainting={favPainting} addPainting={setFavPainting}/>}
+          {currentPage === 'favourite' && <Favourite emptyFav={emptyFav} favGal={favGal} favArt={favArt} favPainting={favPainting} setFavGal={setFavGal} setFavArt={setFavArt} setFavPainting={setFavPainting}/>}
+          {currentPage === 'about' && <About logOut={setIsLoggedIn} setCurrentPage={setCurrentPage}/>}
       </article>}
     </>
   );

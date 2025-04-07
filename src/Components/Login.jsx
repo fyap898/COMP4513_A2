@@ -14,12 +14,12 @@ const Login = (props) => {
                     Login
                 </h2>
 
-                <form className="space-y-6" onSubmit={props.handleLogin}>
+                <form className="space-y-6" onSubmit={() => props.handleLogin(props.email, props.password)}>
                     <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-[#DAE2DF] mb-1 text-left">
                             Email or Username
                         </label>
-                        <input type="email" 
+                        <input type="text" 
                             id="email" 
                             value={props.email}
                             onChange={(e) => props.setEmail(e.target.value)}
@@ -46,7 +46,8 @@ const Login = (props) => {
                             Login
                         </button>
                         <button type="button"
-                                className="px-6 py-2 border border-[#6B8B93] rounded-md bg-[#0A171A] text-white hover:bg-[#6B8B93] font-semibold transition">
+                                className="px-6 py-2 border border-[#6B8B93] rounded-md bg-[#0A171A] text-white hover:bg-[#6B8B93] font-semibold transition"
+                                onClick={() => props.registerUser(props.email, props.password)}>
                             Register
                         </button>
                     </div>

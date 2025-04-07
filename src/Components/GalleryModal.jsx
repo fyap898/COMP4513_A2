@@ -31,7 +31,6 @@ const GalleryModal = (props) => {
     return(
         <div className="fixed inset-0 backdrop-blur-md flex items-center justify-center z-60 overflow-auto">
             <div className="bg-gray-100 p-8 rounded-lg shadow-xl w-full max-w-6xl min-h-[550px] relative">
-                {/* Header */}
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-xl font-semibold text-center w-full">Gallery Details</h2>
                     <div className="absolute right-8 top-8 flex gap-2">
@@ -39,10 +38,8 @@ const GalleryModal = (props) => {
                     </div>
                 </div>
 
-                {/* Content layout */}
                 <div className="flex gap-6">
                 
-                {/* Left Map Panel */}
                     <div className="flex-shrink-0 w-[300px] h-[300px] overflow-hidden flex items-center justify-center">
                         <MapContainer center={[lat, lng]} zoom={13} style={{ height: '100%', width: '100%' }}>
                             <TileLayer
@@ -53,14 +50,8 @@ const GalleryModal = (props) => {
                                 <Popup>{galleryName}</Popup>
                             </Marker>
                         </MapContainer>
-                        {/* <img
-                        src={`/paintings/full/${imageFileName.padStart(6, '0')}.jpg`}
-                        alt="Thumbnail"
-                        className="max-w-full max-h-[90vh] object-contain rounded-md"
-                        /> */}
                     </div>
 
-                    {/* Right Info Panel */}
                     <div className="flex flex-col justify-start text-[#0A171A] space-y-2 overflow-y-auto max-h-[90vh] pr-2">
                         <h3 className="text-3xl font-bold text-left">{galleryName}</h3>
 
@@ -74,16 +65,6 @@ const GalleryModal = (props) => {
                             <p><span className="font-semibold">Gallery Longitude:</span> {lng}</p>
                             <p><span className="font-semibold">Gallery Website:</span> <a href={url} className="hover:underline text-blue-600 hover:text-blue-800">{galleryHyperlink}</a></p>
                         </div>
-
-                        {/* Colors */}
-                        {/* <div className="mt-4">
-                            <p className="text-xl text-left font-bold mb-2">Dominant Colors</p>
-                            <div className="flex gap-2 flex-wrap">
-                                {props.painting.domColors.map(c => (
-                                <PaintingDomColItem key={`${c.web}-${c.name}`} colourCode={c.web} colourName={c.name} />
-                                ))}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>
