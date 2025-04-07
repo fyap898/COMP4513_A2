@@ -1,5 +1,5 @@
 import PaintingFilter from "./PaintingFilter";
-import PaintingInfo from "./PaintingInfo";
+import PaintingInfo from "../PopUp/PaintingInfo";
 import PaintingList from "./PaintingList";
 import FilterPainting from "./FilterPainting";
 import { useState, useEffect} from 'react';

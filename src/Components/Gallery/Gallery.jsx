@@ -1,7 +1,7 @@
 import GalleryInfo from "./GalleryInfo";
 import GalleryList from "./GalleryList";
 import GalleryPaintingList from "./GalleryPaintingList";
-import PaintingInfo from "../Painting/PaintingInfo";
+import PaintingInfo from "../PopUp/PaintingInfo";
 import {useState, useEffect} from 'react';
 
 const Gallery = (props) => {

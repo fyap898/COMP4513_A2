@@ -1,11 +1,11 @@
-import PaintingInfo from "../Painting/PaintingInfo";
+import PaintingInfo from "../PopUp/PaintingInfo";
 import FavouriteArtist from "./FavouriteArtist";
 import FavouriteGallery from "./FavouriteGallery";
 import FavouriteManip from "./FavouriteManip";
 import FavouriteNav from "./FavouriteNav";
 import FavouritePainting from "./FavouritePainting";
-import GalleryModal from "../GalleryModal";
-import ArtistModal from "../ArtistModal";
+import GalleryModal from "../PopUp/GalleryModal";
+import ArtistModal from "../PopUp/ArtistModal";
 import {useState, useEffect} from 'react';
 
 const Favourite = (props) => {

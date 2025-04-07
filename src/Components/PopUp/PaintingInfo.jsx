@@ -1,4 +1,4 @@
-import PaintingDomColItem from "./PaintingDomColItem";
+import PaintingDomColItem from "../Painting/PaintingDomColItem";
 import {useState} from 'react';
 
 // Input: painting, key,  

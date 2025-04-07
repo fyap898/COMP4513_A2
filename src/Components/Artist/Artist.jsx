@@ -1,7 +1,7 @@
 import ArtistList from "./ArtistList";
 import ArtistInfo from "./ArtistInfo";
 import ArtistPaintingList from "./ArtistPaintingList";
-import PaintingInfo from "../Painting/PaintingInfo";
+import PaintingInfo from "../PopUp/PaintingInfo";
 import {useState, useEffect} from 'react';
 
 const Artist = (props) => {

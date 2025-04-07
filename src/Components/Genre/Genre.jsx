@@ -1,4 +1,4 @@
-import PaintingInfo from "../Painting/PaintingInfo";
+import PaintingInfo from "../PopUp/PaintingInfo";
 import GenreInfo from "./GenreInfo";
 import GenreList from "./GenreList";
 import GenrePainting from "./GenrePainting";
