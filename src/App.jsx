@@ -12,6 +12,7 @@ import Login from './Components/Login'
 import PaintingInfo from './Components/Painting/PaintingInfo'
 import fetchAllData from './Fetch'
 import EnrichPaintings from './EnrichPaintings'
+import About from './Components/About'
 
 // depend which button is selected, display which page
 function App() {
@@ -23,6 +24,15 @@ function App() {
   const [genres, setGenres] = useState([]);
   const [paintingGenres, setPaintingGenres] = useState([]);
   const [enrichedPaintings, setEnrichedPaintings] = useState([]);
+  const [favGal, setFavGal] = useState([]);
+  const [favArt, setFavArt] = useState([]);
+  const [favPainting, setFavPainting] = useState([]);
+
+  const emptyFav = () => {
+      setFavGal([]);
+      setFavArt([]);
+      setFavPainting([]);
+  }
 
   //Login credential
   const [email, setEmail] = useState('');
@@ -33,7 +43,7 @@ function App() {
 
   // Page State
   // available page: 'login', 'artist', 'gallery', 'painting', 'genre', 'favourite', 'about'
-  const [currentPage, setCurrentPage] = useState('painting');
+  const [currentPage, setCurrentPage] = useState('favourite');
 
 
   const handleLogin = (e) => {
@@ -60,19 +70,11 @@ function App() {
     if (currentPage === 'login') {
       body.className = 'bg-[#A0BBBF] overflow-hidden bg-cover bg-center bg-no-repeat';
       body.style.backgroundImage = "url('/HeroLightUp.jpg')";
-    } else if(currentPage === 'favourite'){
-        body.className = "bg-[#A0BBBF] pointer-event-none overflow-hidden";
-        body.style.backgroundImage = "";
-    } else if(currentPage === 'about'){
-      body.className = "bg-[#A0BBBF] pointer-event-none overflow-hidden";
-      body.style.backgroundImage = "";
     } else {
-      body.className= "bg-[#A0BBBF]";
+      body.className= "bg-[#A0BBBF] pointer-events-auto";
       body.style.backgroundImage = "";
     };
-  }
-
-  
+  }  
 
   useEffect(() => {
     console.log("loadData");
@@ -97,6 +99,7 @@ function App() {
 
   // Use Effect for switching page depend on the current page state
   useEffect(() => {
+    console.log(currentPage);
     updateBodyClass();
   }, [currentPage])
 
@@ -116,11 +119,12 @@ function App() {
       {currentPage !== 'login' &&
       <article >
           <Header page={currentPage} setPage={setCurrentPage}/>
-          {currentPage === 'artist' && <Artist artists={artists} paintings={enrichedPaintings} galleries={galleries} genres={genres}/>}
-          {currentPage === 'gallery' && <Gallery data={galleries}/>}
-          {currentPage === 'painting' && <Painting paintings={enrichedPaintings} artists={artists} galleries={galleries} genres={genres}/>}
-          {currentPage === 'genre' && <Genre data={genres}/>}
-
+          {currentPage === 'artist' && <Artist setCurrentPage={setCurrentPage} artists={artists} paintings={enrichedPaintings} galleries={galleries} genres={genres} favArt={favArt} favPainting={favPainting} addArt={setFavArt} addPainting={setFavPainting}/>}
+          {currentPage === 'gallery' && <Gallery setCurrentPage={setCurrentPage} galleries={galleries} paintings={enrichedPaintings} favGal={favGal} favPainting={favPainting} addGal={setFavGal} addPainting={setFavPainting}/>}
+          {currentPage === 'painting' && <Painting setCurrentPage={setCurrentPage} paintings={enrichedPaintings} artists={artists} galleries={galleries} genres={genres} favPainting={favPainting} addPainting={setFavPainting}/>}
+          {currentPage === 'genre' && <Genre setCurrentPage={setCurrentPage} genres={genres} paintings={enrichedPaintings} favPainting={favPainting} addPainting={setFavPainting}/>}
+          {currentPage === 'favourite' && <Favourite setCurrentPage={setCurrentPage} emptyFav={emptyFav} favGal={favGal} favArt={favArt} favPainting={favPainting} setFavGal={setFavGal} setFavArt={setFavArt} setFavPainting={setFavPainting}/>}
+          {currentPage === 'about' && <About/>}
       </article>}
     </>
   );

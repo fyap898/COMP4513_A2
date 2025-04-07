@@ -2,7 +2,7 @@ const ArtistPaintingListItem = (props) => {
     const imageFileName = String(props.painting.imageFileName);
     return(
         <div className="flex items-center gap-6 p-6 rounded-md bg-[#DAE2DF] border-[#6B8B93]">
-            <img src={`https://res.cloudinary.com/funwebdev/image/upload/h_200/art/paintings/square/${imageFileName.padStart(6, '0')}.jpg`} alt="Thumbnail" className="w-20 h-20 object-cover rounded-md"/>
+            <img src={`/paintings/square/${imageFileName.padStart(6, '0')}.jpg`} alt="Thumbnail" className="w-20 h-20 object-cover rounded-md"/>
             <div className="text-left space-y-1">
                 <p className="text-lg font-semibold text-[#0A171A]">{props.painting.title}</p>
                 <p className="text-sm text-[#3D5C64]">Artist: {props.painting.artistName}</p>

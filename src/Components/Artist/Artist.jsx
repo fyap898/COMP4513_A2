@@ -25,27 +25,42 @@ const Artist = (props) => {
 
     return(
         <main className="grid grid-cols-[2fr_3fr_5fr] gap-4 mt-24 p-8 bg-[#DAE2DF]">
-            <section className="bg-[#6B8B93] shadow-md p-4 rounded-lg overflow-hidden flex flex-col">
+            <section className="bg-[#6B8B93] shadow-md p-4 rounded-lg overflow-hidden flex flex-col self-start">
                 <h3 className="text-lg font-semibold text-[#0A171A]">List of Artist Names</h3>
                 <p className="text-sm text-gray-300">(Last Name, First Name)</p>
                 <p className="text-sm text-gray-300">sorted by last name</p>
-                <div className="overflow-y-auto flex-1 pr-1 max-h-[600px]">
+                <div className="overflow-y-auto flex-1 pr-1 max-h-[500px]">
                     <ArtistList artists={props.artists} populateInfo={setSelectedArtist}/>
                 </div>
             </section>
 
-            <section className="bg-[#6B8B93] shadow-md p-4 rounded-lg self-start">
-                <h3 className="text-lg font-semibold text-[#0A171A]">Artist Info</h3>
-                <ArtistInfo artist={selectedArtist} />
-            </section>
             <section className="bg-[#6B8B93] shadow-md p-4 rounded-lg">
+                <h3 className="text-lg font-semibold text-[#0A171A]">Artist Info</h3>
+                {selectedArtist ?
+                    (<div className="pr-1 max-h=[750px] mt-2">
+                        <ArtistInfo artist={selectedArtist} favArt={props.favArt} onFav={() => props.addArt(prev => [...prev, selectedArtist])}/>
+                    </div>)
+                    :(<p className="text-white mt-4">Please select an artist to view their info.</p>)}
+            </section>
+            
+            <section className="bg-[#6B8B93] shadow-md p-4 rounded-lg self-start min-h-[600px]">
                 <h3 className="text-lg font-semibold text-[#0A171A]">Paintings for Selected Artist</h3>
                 {selectedArtist ? 
-                    (<ArtistPaintingList paintings={props.paintings} artist={selectedArtist} galleries={props.galleries} genres={props.genres} learnMore={setSelectedPainting}/>) 
+                    (<div className="overflow-y-auto pr-1 mt-2">
+                        <ArtistPaintingList paintings={props.paintings} artist={selectedArtist} galleries={props.galleries} 
+                                            genres={props.genres} learnMore={setSelectedPainting}/>
+                    </div>) 
                     : (<p className="text-white mt-4">Please select an artist to view their paintings.</p>)}
             </section>
 
-            {selectedPainting && <PaintingInfo painting={selectedPainting} key={selectedPainting.paintingId} onClose={() => setSelectedPainting(null)}/>}
+            {selectedPainting && <PaintingInfo painting={selectedPainting} key={selectedPainting.paintingId} 
+                                                favPainting={props.favPainting} onClose={() => setSelectedPainting(null)} 
+                                                onFav={() => props.addPainting(prev => [...prev, selectedPainting])}/>}
+
+            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="fixed bottom-6 right-6 bg-[#0A171A] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#3D5C64] transition z-50">
+            ↑ Top
+            </button>
         </main>
     );
 }

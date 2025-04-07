@@ -1,9 +1,13 @@
 import GalleryListItem from "./GalleryListItem";
 
-const GalleryList = () => {
+const GalleryList = (props) => {
+
+    const sortedGalleries = [...props.galleries].sort((a, b) =>
+        a.galleryName.localeCompare(b.galleryName)
+    );
     return(
         <ul className="mt-4 space-y-2">
-            <GalleryListItem/>
+            {sortedGalleries.map(g => <GalleryListItem key={g.galleryId} gallery={g} populateInfo={props.populateInfo}/>)}
         </ul>
     );
 }

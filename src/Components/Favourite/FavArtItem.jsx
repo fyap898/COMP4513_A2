@@ -1,12 +1,27 @@
-const FavArtItem = () => {
+const FavArtItem = (props) => {
+    const {artist} = props;
+    const name = artist ? `${artist?.firstName} ` + `${artist.lastName}` : "N/A";
+    const year = artist ? `${artist.yearOfBirth} - ${artist.yearOfDeath}` : "N/A";
     return(
-        <li className="bg-white p-4 rounded-lg shadow-md border border-gray-200">
-            <h4 className="text-lg font-semibold text-gray-700 text-left">Artist Name 1</h4>
-            <p className="text-sm text-gray-500 text-left">Description of this artist. It is commonly used in...</p>
-            <p className="text-sm text-gray-500 text-left">Description of this artist</p>
-            <div className="mt-2 flex justify-between">
-                <a href="#" className="text-blue-500 hover:underline text-sm">More Info</a>
-                <button className="text-red-500 hover:text-red-700 text-sm">Remove</button>
+        <li className="flex items-center gap-6 p-6 rounded-md bg-[#A0BBBF] border-[#6B8B93]">
+            <img src={`/artists/full/${artist.artistId}.jpg`}
+                alt="Artist Thumbnail" className="w-20 h-20 object-cover rounded-md" />
+
+            <div className="text-left space-y-1 flex-1">
+                <p className="text-lg font-semibold text-[#0A171A]">{name}</p>
+                <p className="text-sm text-[#3D5C64]">Nationality: {artist.nationality}</p>
+                <p className="text-sm text-[#3D5C64]">Year: {year}</p>
+            </div>
+
+            <div className="flex flex-col items-end gap-2">
+                <button className="px-4 py-2 rounded-md bg-[#3D5C64] text-white font-semibold hover:bg-[#6B8B93] transition"
+                        onClick={() => props.learnMore(artist)}>
+                    Learn More
+                </button>
+                <button className="px-3 py-1 rounded-md bg-[#3D5C64] text-white text-sm font-medium hover:bg-red-600 transition"
+                        onClick={() => props.remove(artist)}>
+                    Remove
+                </button>
             </div>
         </li>
     );

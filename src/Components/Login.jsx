@@ -17,7 +17,7 @@ const Login = (props) => {
                 <form className="space-y-6" onSubmit={props.handleLogin}>
                     <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-[#DAE2DF] mb-1 text-left">
-                            Email
+                            Email or Username
                         </label>
                         <input type="email" 
                             id="email" 
