@@ -53,6 +53,21 @@ const About = (props) => {
                         className="underline">
                         React Leaflet(Map)
                     </a></li>
+                    <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F185431%2Fflickr&psig=AOvVaw19YwpWNzWiMeZybD5ZRKDn&ust=1744164208564000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCJieypasx4wDFQAAAAAdAAAAABAJ"
+                        className="underline">
+                        Flickr Place Image
+                    </a>
+                    </li>
+                    <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonduck.com%2Ficons%2F14267%2Fyahoo&psig=AOvVaw07DB-yqN-wTe1Wq6uXHq3O&ust=1744164329537000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCPi_rdCsx4wDFQAAAAAdAAAAABAJ"
+                        className="underline">
+                        Yahoo Image
+                    </a>
+                    </li>
+                    <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fuxwing.com%2Fgoogle-map-icon%2F&psig=AOvVaw2asN6g0eihPAXoA80TB7uP&ust=1744164121381000&source=images&cd=vfe&opi=89978449&ved=0CBQQjhxqFwoTCNiI7eqrx4wDFQAAAAAdAAAAABAE"
+                        className="underline">
+                        Google Map Image
+                    </a>
+                    </li>
 
                 </ul>
 
@@ -68,11 +83,3 @@ const About = (props) => {
 }
 
 export default About;
-// #DAE2DF
-// #A0BBBF
-// #6B8B93
-// #3D5C64
-// #0A171A
-// color https://www.google.com/url?sa=i&url=https%3A%2F%2Fgr.pinterest.com%2Fvbaimas%2Fcolor-palettes%2F&psig=AOvVaw3yklvah5W34LremPIq-6Lo&ust=1742679569548000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCJjWg7-RnIwDFQAAAAAdAAAAABAR
-// hero img https://unsplash.com/photos/black-textile-on-green-textile-FtOfK7TAYmw?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
-// logo https://pngtree.com/freepng/red-and-black-logo_5517319.html

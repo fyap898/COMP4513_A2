@@ -68,8 +68,50 @@ const GalleryModal = (props) => {
                             <p><span className="font-semibold">Gallery Longitude:</span> {lng}</p>
                             <p><span className="font-semibold">Gallery Website:</span> <a href={url} className="hover:underline text-blue-600 hover:text-blue-800">{galleryHyperlink}</a></p>
                         </div>
+                        <div className="mt-6">
+                            <p className="text-xl text-left font-bold mb-2">External Links</p>
+                            <div className="flex gap-4 items-center">
+                                {/* Flickr */}
+                                {gallery.flickrPlaceId && (
+                                <a
+                                    href={`https://www.flickr.com/places/info/${gallery.flickrPlaceId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 hover:text-blue-600 transition"
+                                >
+                                    <img src="/Flickr.png" alt="Flickr" className="w-6 h-6" title="Flickr"/>
+                                </a>
+                                )}
+
+                                {/* Yahoo WOEID */}
+                                {gallery.yahooWoeId && (
+                                <a
+                                    href={`https://www.yahoo.com/news/weather/?woeid=${gallery.yahooWoeId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 hover:text-blue-600 transition"
+                                >
+                                    <img src="/Yahoo.png" alt="Yahoo" className="w-6 h-6" title="Yahoo"/>
+                                </a>
+                                )}
+
+                                {/* Google Place */}
+                                {gallery.googlePlaceId && (
+                                <a
+                                    href={`https://www.google.com/maps/place/?q=place_id:${gallery.googlePlaceId}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-1 hover:text-blue-600 transition"
+                                >
+                                    <img src="/GoogleMap.png" alt="Google Maps" className="w-6 h-6" title="Google Map"/>
+                                </a>
+                                )}
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
+                
             </div>
         </div>
 
