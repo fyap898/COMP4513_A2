@@ -25,13 +25,13 @@ const About = (props) => {
                 </p>
                 <p className="text-[#3D5C64] text-xl leading-relaxed mb-6 text-left">
                     Limitations:
-                    <ul className="list-disc list-inside space-y-2 text-[#3D5C64] text-left">
-                        <li>Every time when page is refreshed, undid or redid, datas like registered credentials and favourite item will be lost.</li>
-                        <li>Also user will be forced log out.</li>
-                        <li>Multiple selection for adding and removing object to/from favourite is not available.</li>
-                        <li>Web links of gallery place such as Flickr and Yahoo might not be working due to outdated version.</li>
-                    </ul>
                 </p>
+                <ul className="list-disc list-inside space-y-2 text-[#3D5C64] text-left">
+                    <li>Every time when page is refreshed, undid or redid, datas like registered credentials and favourite item will be lost.</li>
+                    <li>Also user will be forced log out.</li>
+                    <li>Multiple selection for adding and removing object to/from favourite is not available.</li>
+                    <li>Web links of gallery place such as Flickr and Yahoo might not be working due to outdated version.</li>
+                </ul>
 
 
                 <p className="text-[#3D5C64] text-xl leading-relaxed mb-6 text-left">References:</p>
