@@ -1,5 +1,6 @@
 // File Name: About
 // Purpose: Shows info regarding the project and give credits and references.
+// Detail: Giving credits and option to log out of the web application. 
 
 const About = (props) => {
 

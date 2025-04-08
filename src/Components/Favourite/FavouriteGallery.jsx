@@ -16,7 +16,7 @@ const FavouriteGallery = (props) => {
                     props.favGal && props.favGal.map(g => <FavGalItem gallery={g} key={g.galleryId} learnMore={props.learnMore} remove={props.remove}/>)
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <p className="text-gray-400 text-center">No Favorite Galleries Yet.</p>
+                        <p className="text-gray-400 text-center">No Favourite Galleries Yet.</p>
                     </div>
                 )}
                 

@@ -16,7 +16,7 @@ const FavouritePainting = (props) => {
                     props.favPainting.map(p => <FavPaintingItem painting={p} key={p.paintingId} learnMore={props.learnMore} remove={props.remove}/>)
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <p className="text-gray-400 text-center">No Favourite Painting Yet.</p>
+                        <p className="text-gray-400 text-center">No Favourite Paintings Yet.</p>
                     </div>
                 )}
             </ul>

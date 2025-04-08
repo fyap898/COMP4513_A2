@@ -17,7 +17,7 @@ const FavouriteArtist = (props) => {
                     props.favArt.map(a => <FavArtItem artist={a} key={a.artistId} learnMore={props.learnMore} remove ={props.remove}/>)
                 ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <p className="text-gray-400 text-center">No Favorite Artists Yet.</p>
+                        <p className="text-gray-400 text-center">No Favourite Artists Yet.</p>
                     </div>
                 )}
             </ul>
