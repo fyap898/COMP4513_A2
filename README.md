@@ -14,7 +14,7 @@ Issue on gallery place web link:
 - Same reason for Flickr Place, Flickr Place ID of galleries might not be working as well.
 Issue on adding to or removing from favourite:
 - Unable to provide multi selection for adding and removing option due to time limit and lack of planning. 
-Issues occur when page refreshed:
+Issues occur when page refreshed, undid, redid:
 - Items that added to Favourite list will be erased/lost.
 - Credentials that are previously registered will be erased/lost as well.
 - User will be forced log out of the dashboard.
