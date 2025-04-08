@@ -28,6 +28,7 @@ const About = (props) => {
                     <ul className="list-disc list-inside space-y-2 text-[#3D5C64] text-left">
                         <li>Every time when page is refreshed, datas like registered credentials and favourite item will be lost.</li>
                         <li>Also user will be forced log out.</li>
+                        <li>Multiple selection for adding and removing object to/from favourite is not available.</li>
                     </ul>
                 </p>
 
