@@ -1,3 +1,8 @@
+// File Name: FavouriteNav
+// Purpose: Navigate users to view different category of favourited objects
+// Detail: Display respective category of favourited objects corresponding to 
+//          selected tab.
+
 const FavouriteNav = (props) => {
     return(
         <nav className="flex space-x-2 z-20">
@@ -18,6 +23,3 @@ const FavouriteNav = (props) => {
 }
 
 export default FavouriteNav;
-
-// className="tab-btn px-4 py-2 pb-2 rounded-t-lg bg-white text-black" chosen
-// className="tab-btn px-4 py-2 rounded-t-lg text-gray-500 hover:text-black" rest

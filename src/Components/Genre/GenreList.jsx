@@ -1,3 +1,8 @@
+// File Name: GenreList
+// Purpose: Renders list of genres for user to select for info population
+// Detail: This component takes in array of genre objects and populate all
+//          of the genre object in a list.
+
 import GenreListItem from "./GenreListItem";
 
 const GenreList = (props) => {

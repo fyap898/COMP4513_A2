@@ -1,3 +1,8 @@
+// File Name FilterPainting
+// Purpose: A helper function for filter paintings
+// Detail: Utilised by PaintingFilter to filter paintings based on selected
+//          criteria with one's desired application of filter.
+
 const FilterPainting = (type, titleValue, artistValue, galleryValue, yearFrom, yearTo, paintings)=> {
     if(type === 'title'){
         return paintings.filter((p) => p.title.toLowerCase().includes(titleValue.toLowerCase()));

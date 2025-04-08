@@ -1,6 +1,9 @@
+// File Name: App
+// Purpose: Connects all component to work cohesively
+// Detail: Importing components and managing the web application
+//         as a center piece.
+
 import { useState , useEffect} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header'
 import Artist from './Components/Artist/Artist'
@@ -9,7 +12,6 @@ import Genre from './Components/Genre/Genre'
 import Painting from './Components/Painting/Painting'
 import Favourite from './Components/Favourite/Favourite'
 import Login from './Components/Login'
-import PaintingInfo from './Components/PopUp/PaintingInfo'
 import fetchAllData from './Fetch'
 import EnrichPaintings from './EnrichPaintings'
 import About from './Components/About'

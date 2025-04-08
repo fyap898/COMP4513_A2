@@ -1,3 +1,9 @@
+// File Name: FavArtItem
+// Purpose: Populates individual favourited artist info in one list object
+//          for user to view and remove from favourite
+// Detail: Utilised by FavouriteArtist component to fully populate all favourited
+//          artist object.
+
 const FavArtItem = (props) => {
     const {artist} = props;
     const name = artist ? `${artist?.firstName} ` + `${artist.lastName}` : "N/A";

@@ -1,3 +1,10 @@
+// File Name: ArtistInfo
+// Purpose: Populates selected artist's information for user to add to favourite
+// Detail: This component takes in selected artist object and favourite
+//          artists list, populates artist info. Users are able to add 
+//          artist to favourite. While the system will check whether if 
+//          the artist exists in favourite list and allow user to add.
+
 import { useEffect, useState } from 'react';
 
 const ArtistInfo = (props) => {
@@ -70,4 +77,3 @@ const ArtistInfo = (props) => {
 }
 
 export default ArtistInfo;
-// artist info!!!1

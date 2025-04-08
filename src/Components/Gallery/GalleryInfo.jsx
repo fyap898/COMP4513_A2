@@ -1,3 +1,10 @@
+// File Name: GalleryInfo
+// Purpose: Populates selected artist's information and for user to add to favourite
+// Detail: This component takes in selected gallery object and favourite
+//          gallery list, populates gallery info. Users are able to add
+//          artist to favourite. While the system will check whether if the
+//          artist exists in favourite lsit and allow user to add.
+
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';

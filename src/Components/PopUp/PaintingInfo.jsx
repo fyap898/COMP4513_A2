@@ -1,3 +1,8 @@
+// File Name: PaintingInfo
+// Purpose: Pop up for detailed painting's information
+// Detail: Pops up and display respective painting's information and allow user
+//          to add respective painting to favourite.
+
 import PaintingDomColItem from "../Painting/PaintingDomColItem";
 import {useState} from 'react';
 

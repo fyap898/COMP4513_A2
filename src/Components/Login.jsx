@@ -1,3 +1,8 @@
+// File Name: Login
+// Purpose: Manages login logics
+// Detail: Letting users register credentials or login with registered 
+//          credentials to the web application.
+
 const Login = (props) => {
 
     // console.log(props.email);

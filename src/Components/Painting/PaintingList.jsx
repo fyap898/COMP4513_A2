@@ -1,3 +1,9 @@
+// File Name: PaintingList
+// Purpose: Renders list of paintings for user to select for adding to
+//          favourite list
+// Detail: This components initially populates all painting objects while
+//          allowing users to setting filter layers on paintings.
+
 import PaintingListItem from "./PaintingListItem";
 
 const PaintingList = (props) => {

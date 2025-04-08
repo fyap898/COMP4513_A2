@@ -1,3 +1,8 @@
+// File Name: ArtistListItem
+// Purpose: Populates individual artist info in one list object
+// Detail: Utilised by ArtistList component to fully populate
+//          artist objects.
+
 const ArtistListItem = (props) => {
 
     const name = props.artist.firstName ? `${props.artist.firstName} ${props.artist.lastName}` : props.artist.lastName;

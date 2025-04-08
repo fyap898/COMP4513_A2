@@ -1,3 +1,11 @@
+// File Name: Gallery
+// Purpose: Components for display galleries' data
+// Detail: This components renders Gallery page which consist section such as
+//          Gallery List, Gallery Info and Gallery Painting List. Users will
+//          have to select a gallery to view one's information and paintings.
+//          Users will be able to view details of the painting and add both gallery
+//          and painting to favourite list.
+
 import GalleryInfo from "./GalleryInfo";
 import GalleryList from "./GalleryList";
 import GalleryPaintingList from "./GalleryPaintingList";

@@ -1,3 +1,8 @@
+// File Name: GalleryPaintingItem
+// Purpose: Populates individual painting info in one list object
+// Detail: Utilised by GalleryPaintingList component to fully populate
+//          painting objects.
+
 const GalleryPaintingItem = (props) => {
     const imageFileName = String(props.painting.imageFileName);
     return(

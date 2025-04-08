@@ -1,3 +1,9 @@
+// File Name: FavouriteGallery
+// Purpose: Renders list of favourited galleries for user to view and remove 
+//          individual gallery object
+// Detail: This component takes in array of favourited gallery objects and
+//          populate all of the favourited gallery object in a list.
+
 import FavGalItem from "./FavGalItem";
 
 const FavouriteGallery = (props) => {

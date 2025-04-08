@@ -1,3 +1,8 @@
+// File Name: GenrePaintingItem
+// Purpose: Populates individual specific genre associated painting in one
+//          list object for user to view and add to favourite
+// Detail: Utilised by GenrePainting component to fully populate painting objects.
+
 const GenrePaintingItem = (props) => {
     const imageFileName = String(props.painting.imageFileName);
     return(

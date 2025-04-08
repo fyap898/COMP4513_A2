@@ -1,3 +1,8 @@
+// File Name: Header
+// Purpose: Let user to navigate through different pages in the web application
+// Detail: Provide choices for user to choose and direct them to view on different
+//          categories' page.
+
 const Header = (props) => {
     
     const getButtonStyle = (page) => {

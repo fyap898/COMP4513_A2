@@ -1,3 +1,8 @@
+// File Name: ArtistPaintingList
+// Purpose: Renders list of respective artists' paintings
+// Detail: This component take in array of artist objects and populate
+//          all of the artist objects in a list.
+
 import ArtistPaintingListItem from "./ArtistPaintingListItem";
 import {useState} from 'react';
 

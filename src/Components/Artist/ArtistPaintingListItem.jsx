@@ -1,3 +1,9 @@
+// File Name: ArtistPaintingListItem
+// Purpose: Populates individual artist's painting's info in one list object
+//          for user to view and add
+// Detail: Utilised by ArtistPaintingList component to fully populate
+//          artist's paintings object.
+
 const ArtistPaintingListItem = (props) => {
     const imageFileName = String(props.painting.imageFileName);
     return(

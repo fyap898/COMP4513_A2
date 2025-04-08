@@ -1,3 +1,8 @@
+// File Name: GenrePainting
+// Purpose: Renders list of paintings for user to select for adding to favourite
+// Detail: This component takes in array of painting objects that filtered by
+//          association with user-selected genre and populate them in a list.
+
 import GenrePaintingItem from "./GenrePaintingItem";
 
 const GenrePainting = (props) => {

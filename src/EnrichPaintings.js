@@ -1,3 +1,10 @@
+// File Name: EnrichPaintings
+// Purpose: A helper function to recompose painting objects
+// Detail: Takes in all painting, gallery, artist, paintingGenre and genre objects. Recompose
+//          all painting objects by matching each painting objects to their respective associate criterias
+//          such as artist with id, gallery with id and location, genre with id and name, parsing respective painting's
+//          dominant colours and add them as new instances to the painting objects.
+
 // Populate IDs in paintings into actual data
 // Populate data of painting's dominant colours
 function EnrichPaintings(paintings, artists, galleries, genres, paintingGenres) {

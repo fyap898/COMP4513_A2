@@ -1,7 +1,10 @@
+// File Name: GalleryModal
+// Purpose: Pop up for detailed gallery's information
+// Detail: Pops up and display respective gallery's information.
+
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import {useEffect} from 'react';
 
 // Fix default marker icon (Leaflet bug in React)
 delete L.Icon.Default.prototype._getIconUrl;

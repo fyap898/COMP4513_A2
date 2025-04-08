@@ -1,3 +1,11 @@
+// File Name: Genre
+// Purpose: Components for display genres' data
+// Detail: This component renders Genre page which consists sections such as
+//          Genre LIst, Genre Info and Genre Painting List. Users will have to
+//          select a genre to view one's information and paintings. Users will be
+//          able to view details of the selected genre and add paintings that
+//          associated with respective genres.
+
 import PaintingInfo from "../PopUp/PaintingInfo";
 import GenreInfo from "./GenreInfo";
 import GenreList from "./GenreList";

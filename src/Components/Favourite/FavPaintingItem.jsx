@@ -1,3 +1,9 @@
+// File Name: FavPaintingItem
+// Purpose: Populates individual favourited painting info in one list object
+//          for user to view and remove from favourite
+// Detail: Utilised by FavouritePainting component to fully populate all favourited
+//          painting object.
+
 const FavPaintingItem = (props) => {
     const imageFileName = String(props.painting.imageFileName);
     return(

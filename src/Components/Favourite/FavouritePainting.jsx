@@ -1,3 +1,9 @@
+// File Name: FavouritePainting
+// Purpose: Renders list of favourited paintings for user to view and remove 
+//          individual painting object
+// Detail: This component takes in array of favourited painting objects and
+//          populate all of the favourited painting object in a list.
+
 import FavPaintingItem from "./FavPaintingItem";
 
 const FavouritePainting = (props) => {

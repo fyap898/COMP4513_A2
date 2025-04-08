@@ -1,3 +1,8 @@
+// File Name: ArtistList
+// Purpose: Renders list of artists for user to select
+// Detail: This component takes in array of artist objects and populate
+//          all of the artist object in a list.
+
 import ArtistListItem from "./ArtistListItem";
 
 const ArtistList = (props) => {

@@ -1,3 +1,11 @@
+// File Name: Artist
+// Purpose: Components for display artists' data
+// Detail: This component renders Artist page which consists sections such as
+//          Artist List, Artist Info and Artist Painting List. Users will have 
+//          to select an artist to view one's information and paintings. Users
+//          will be able to view details of the painting and add to favourite list.
+// 
+
 import ArtistList from "./ArtistList";
 import ArtistInfo from "./ArtistInfo";
 import ArtistPaintingList from "./ArtistPaintingList";
@@ -57,6 +65,7 @@ const Artist = (props) => {
                                                 favPainting={props.favPainting} onClose={() => setSelectedPainting(null)} 
                                                 onFav={() => props.addPainting(prev => [...prev, selectedPainting])}/>}
 
+            {/* Button to return page to top */}
             <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="fixed bottom-6 right-6 bg-[#0A171A] text-white px-4 py-2 rounded-full shadow-md hover:bg-[#3D5C64] transition z-50">
             ↑ Top
@@ -66,5 +75,3 @@ const Artist = (props) => {
 }
 
 export default Artist;
-
-// painting list and modal dialog

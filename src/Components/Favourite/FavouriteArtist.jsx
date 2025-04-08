@@ -1,10 +1,15 @@
-import FavArtItem from "./FavArtItem";
+// File Name: FavouriteArtist
+// Purpose: Renders list of favourited artist for user to view and remove 
+//          individual artist object
+// Detail: This component takes in array of favourited artist objects and
+//          populate all of the favourited artist object in a list.
 
+import FavArtItem from "./FavArtItem";
 
 const FavouriteArtist = (props) => {
 
     const hasFav = props.favArt && props.favArt.length > 0;
-    const imageFileName = null; //String(artist.artistId).padStart(6, '0');
+    
     return(
         <div id="content-artist" className="tab-content flex flex-col gap-2 h-[55vh]">
             <ul className="p-4 bg-gray-50 rounded-lg shadow-sm overflow-auto h-[55vh] w-full space-y-2">

@@ -1,3 +1,6 @@
+// File Name: About
+// Purpose: Shows info regarding the project and give credits and references.
+
 const About = (props) => {
 
     const logOut = () => {
@@ -43,6 +46,10 @@ const About = (props) => {
                     <li><a href="https://pngtree.com/freepng/red-and-black-logo_5517319.html"
                         className="underline">
                         Logo Image
+                    </a></li>
+                    <li><a href="https://leafletjs.com/reference.html"
+                        className="underline">
+                        React Leaflet(Map)
                     </a></li>
 
                 </ul>

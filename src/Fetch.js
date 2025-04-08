@@ -1,3 +1,8 @@
+// File Name: Fetch
+// Purpose: A helper function to fetch data
+// Detail: Queries multiple Supabase tables (artists, galleries, paintings, genres, paintinggenres)
+//         and returns the data for use in the App component.
+
 import supabase from './supabase.js'; // adjust path to your supabase.js
 
 async function fetchAllData() {

@@ -1,3 +1,8 @@
+// File Name: FavouriteManip
+// Purpose: Allows users to empty all favourited objects
+// Detail: Provide choice of removing all favourited objects 
+//          rather than one-at-a-time.
+
 import {useState} from 'react';
 
 const FavouriteManip = (props) => {

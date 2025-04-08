@@ -7,6 +7,8 @@ This web application allows user to view data of an art dashboard where it is po
 https://flourishing-starburst-48b7b3.netlify.app/
 
 ## Limitations
+Issue on adding to or removing from favourite:
+- Unable to provide multi selection for adding and removing option due to time limit and lack of planning. 
 Issues occur when page refreshed:
 - Items that added to Favourite list will be erased/lost.
 - Credentials that are previously registered will be erased/lost as well.

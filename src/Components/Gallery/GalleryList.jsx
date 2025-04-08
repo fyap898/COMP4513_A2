@@ -1,3 +1,8 @@
+// File Name: GalleryList
+// Purpose: Renders list of galleries for user to select for info population
+// Detail: This component takes in array of artist objects and populate
+//          all of the gallery object in a list.
+
 import GalleryListItem from "./GalleryListItem";
 
 const GalleryList = (props) => {

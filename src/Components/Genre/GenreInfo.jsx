@@ -1,3 +1,8 @@
+// File Name: GenreInfo
+// Purpose: Populates selected genre's information
+// Detail: This component takes in selected genre object and populates genre
+//          info. Users are able to view selected genre's information.
+
 import {useState} from 'react';
 const GenreInfo = (props) => {
 

@@ -1,3 +1,8 @@
+// File Name: GalleryPaintingList
+// Purpose: Renders list of galleries for user to select for info population
+// Detail: This component takes in array of gallery objects and populate
+//          all of the gallery object in a list.
+
 import GalleryPaintingItem from "./GalleryPaintingItem";
 
 const GalleryPaintingList = (props) => {

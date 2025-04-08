@@ -1,3 +1,7 @@
+// File Name: ArtistModal
+// Purpose: Pop up for detailed artist's information
+// Detail: Pops up and display respective artist's information.
+
 const ArtistModal = (props) => {
 
     //Populate artist's info

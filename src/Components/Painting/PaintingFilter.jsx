@@ -1,5 +1,7 @@
-import {useState} from 'react';
-import FilterPainting from './FilterPainting';
+// File Name: PaintingFilter
+// Purpose: Allow user to apply filters for painting queries
+// Detail: One among the Categories like Year of Work range, Title, Gallery 
+//          and Artist can be selected to be apply for filtering paintings.
 
 const PaintingFilter = (props) => {
 
@@ -91,6 +93,3 @@ const PaintingFilter = (props) => {
 }
 
 export default PaintingFilter;
-
-// bg-gray-400 disabled
-// filter function in painting component?

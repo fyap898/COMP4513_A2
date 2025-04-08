@@ -124,8 +124,3 @@ const Favourite = (props) => {
 }
 
 export default Favourite;
-
-//body when pop-up (overflow-hidden, pointer-event-none)
-//query id add "hidden"
-
-//use useRef and useEffect to persist scroll position

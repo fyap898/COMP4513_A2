@@ -1,3 +1,10 @@
+// File Name: Painting
+// Purpose: Components for display paintings' data 
+// Detail: This component renders Painting page which consists section such as
+//          Painting Filter, Painting List and Painting Info. Users will have to
+//          apply filters in order to search desired paintings. Users will be able
+//          to view details of the painting and add to favourite list.
+
 import PaintingFilter from "./PaintingFilter";
 import PaintingInfo from "../PopUp/PaintingInfo";
 import PaintingList from "./PaintingList";
