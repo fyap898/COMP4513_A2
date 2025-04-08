@@ -122,7 +122,7 @@ function App() {
   // console.log(genres);
   // console.log(currentPage);
   // console.log(domColors);
-  console.log(enrichedPaintings);
+  // console.log(enrichedPaintings);
 
 
 

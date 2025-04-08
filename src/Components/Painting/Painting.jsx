@@ -92,8 +92,3 @@ const Painting = (props) => {
 }
 
 export default Painting;
-
-// main bg-[#6B8B93]
-// section bg-[#A0BBBF]
-// h in section text-[#0A171A]
-// 

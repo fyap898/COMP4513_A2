@@ -52,15 +52,6 @@ const ArtistModal = (props) => {
                             <p><span className="font-semibold">Artist Link:</span> <a href={artistUrl} className="hover:underline text-blue-600 hover:text-blue-800">{artistHyperlink}</a></p>
                         </div>
 
-                        {/* Colors */}
-                        {/* <div className="mt-4">
-                            <p className="text-xl text-left font-bold mb-2">Dominant Colors</p>
-                            <div className="flex gap-2 flex-wrap">
-                                {props.painting.domColors.map(c => (
-                                <PaintingDomColItem key={`${c.web}-${c.name}`} colourCode={c.web} colourName={c.name} />
-                                ))}
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>

@@ -23,5 +23,3 @@ const PaintingListItem = (props) => {
 }
 
 export default PaintingListItem;
-
-// onclick to trigger pop up for adding to fav

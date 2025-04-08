@@ -7,10 +7,6 @@ import {useState} from 'react';
 const GenreInfo = (props) => {
 
     const {genre} = props;
-    // const name = genre ? genre.genreName : "NA";
-    // const description = genre ? genre.description : "-";
-    // const info = genre?.wikiLink ? "Genre Link" : "Link Not Available";
-    // const infoUrl = genre ? genre.wikiLink : "#";
 
     const [expanded, setExpanded] = useState(false);
 
