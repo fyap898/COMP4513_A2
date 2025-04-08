@@ -1,5 +1,5 @@
 # COMP 4513 Assignment 2
-Author: Felix Yap
+Author: Felix Yap  
 Instructor: Randy Connolly
 
 ## Details
